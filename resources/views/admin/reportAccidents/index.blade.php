@@ -15,357 +15,168 @@
     </div>
 
     <div class="card-body">
-        <div class="table-responsive">
-            <table class=" table table-bordered table-striped table-hover datatable datatable-ReportAccident">
-                <thead>
-                    <tr>
-                        <th width="10">
+        <table class=" table table-bordered table-striped table-hover ajaxTable datatable datatable-ReportAccident">
+            <thead>
+                <tr>
+                    <th width="10">
 
-                        </th>
-                        <th>
-                            {{ trans('cruds.reportAccident.fields.id') }}
-                        </th>
-                        <th>
-                            {{ trans('cruds.reportAccident.fields.location') }}
-                        </th>
-                        <th>
-                            {{ trans('cruds.reportAccident.fields.offender') }}
-                        </th>
-                        <th>
-                            {{ trans('cruds.reportAccident.fields.offender_id_number') }}
-                        </th>
-                        <th>
-                            {{ trans('cruds.reportAccident.fields.car_number') }}
-                        </th>
-                        <th>
-                            {{ trans('cruds.reportAccident.fields.issuer') }}
-                        </th>
-                        <th>
-                            {{ trans('cruds.reportAccident.fields.date_of_accident') }}
-                        </th>
-                        <th>
-                            {{ trans('cruds.reportAccident.fields.accident_time') }}
-                        </th>
-                        <th>
-                            {{ trans('cruds.reportAccident.fields.estimate_reference') }}
-                        </th>
-                        <th>
-                            {{ trans('cruds.reportAccident.fields.estimate_date') }}
-                        </th>
-                        <th>
-                            {{ trans('cruds.reportAccident.fields.damage_statement_1') }}
-                        </th>
-                        <th>
-                            {{ trans('cruds.reportAccident.fields.damage_value_1') }}
-                        </th>
-                        <th>
-                            {{ trans('cruds.reportAccident.fields.notes_1') }}
-                        </th>
-                        <th>
-                            {{ trans('cruds.reportAccident.fields.damage_statement_2') }}
-                        </th>
-                        <th>
-                            {{ trans('cruds.reportAccident.fields.damage_value_2') }}
-                        </th>
-                        <th>
-                            {{ trans('cruds.reportAccident.fields.notes_2') }}
-                        </th>
-                        <th>
-                            {{ trans('cruds.reportAccident.fields.damage_statement_3') }}
-                        </th>
-                        <th>
-                            {{ trans('cruds.reportAccident.fields.damage_value_3') }}
-                        </th>
-                        <th>
-                            {{ trans('cruds.reportAccident.fields.notes_3') }}
-                        </th>
-                        <th>
-                            {{ trans('cruds.reportAccident.fields.damage_statement_4') }}
-                        </th>
-                        <th>
-                            {{ trans('cruds.reportAccident.fields.damage_value_4') }}
-                        </th>
-                        <th>
-                            {{ trans('cruds.reportAccident.fields.notes_4') }}
-                        </th>
-                        <th>
-                            {{ trans('cruds.reportAccident.fields.damage_statement_5') }}
-                        </th>
-                        <th>
-                            {{ trans('cruds.reportAccident.fields.damage_value_5') }}
-                        </th>
-                        <th>
-                            {{ trans('cruds.reportAccident.fields.notes_5') }}
-                        </th>
-                        <th>
-                            {{ trans('cruds.reportAccident.fields.damage_statement_6') }}
-                        </th>
-                        <th>
-                            {{ trans('cruds.reportAccident.fields.damage_value_6') }}
-                        </th>
-                        <th>
-                            {{ trans('cruds.reportAccident.fields.notes_6') }}
-                        </th>
-                        <th>
-                            {{ trans('cruds.reportAccident.fields.damage_statement_7') }}
-                        </th>
-                        <th>
-                            {{ trans('cruds.reportAccident.fields.damage_value_7') }}
-                        </th>
-                        <th>
-                            {{ trans('cruds.reportAccident.fields.notes_7') }}
-                        </th>
-                        <th>
-                            {{ trans('cruds.reportAccident.fields.damage_statement_8') }}
-                        </th>
-                        <th>
-                            {{ trans('cruds.reportAccident.fields.damage_value_8') }}
-                        </th>
-                        <th>
-                            {{ trans('cruds.reportAccident.fields.notes_8') }}
-                        </th>
-                        <th>
-                            {{ trans('cruds.reportAccident.fields.damage_statement_9') }}
-                        </th>
-                        <th>
-                            {{ trans('cruds.reportAccident.fields.damage_value_9') }}
-                        </th>
-                        <th>
-                            {{ trans('cruds.reportAccident.fields.notes_9') }}
-                        </th>
-                        <th>
-                            {{ trans('cruds.reportAccident.fields.damage_statement_10') }}
-                        </th>
-                        <th>
-                            {{ trans('cruds.reportAccident.fields.damage_value_10') }}
-                        </th>
-                        <th>
-                            {{ trans('cruds.reportAccident.fields.notes_10') }}
-                        </th>
-                        <th>
-                            {{ trans('cruds.reportAccident.fields.accident_photos') }}
-                        </th>
-                        <th>
-                            {{ trans('cruds.reportAccident.fields.name_1') }}
-                        </th>
-                        <th>
-                            {{ trans('cruds.reportAccident.fields.dep_mang_1') }}
-                        </th>
-                        <th>
-                            {{ trans('cruds.reportAccident.fields.name_2') }}
-                        </th>
-                        <th>
-                            {{ trans('cruds.reportAccident.fields.dep_mang_2') }}
-                        </th>
-                        <th>
-                            {{ trans('cruds.reportAccident.fields.name_3') }}
-                        </th>
-                        <th>
-                            {{ trans('cruds.reportAccident.fields.dep_mang_3') }}
-                        </th>
-                        <th>
-                            {{ trans('cruds.reportAccident.fields.name_4') }}
-                        </th>
-                        <th>
-                            {{ trans('cruds.reportAccident.fields.dep_mang_4') }}
-                        </th>
-                        <th>
-                            {{ trans('cruds.reportAccident.fields.confidence') }}
-                        </th>
-                        <th>
-                            &nbsp;
-                        </th>
-                    </tr>
-                </thead>
-                <tbody>
-                    @foreach($reportAccidents as $key => $reportAccident)
-                        <tr data-entry-id="{{ $reportAccident->id }}">
-                            <td>
-
-                            </td>
-                            <td>
-                                {{ $reportAccident->id ?? '' }}
-                            </td>
-                            <td>
-                                {{ $reportAccident->location ?? '' }}
-                            </td>
-                            <td>
-                                {{ $reportAccident->offender ?? '' }}
-                            </td>
-                            <td>
-                                {{ $reportAccident->offender_id_number ?? '' }}
-                            </td>
-                            <td>
-                                {{ $reportAccident->car_number ?? '' }}
-                            </td>
-                            <td>
-                                {{ $reportAccident->issuer ?? '' }}
-                            </td>
-                            <td>
-                                {{ $reportAccident->date_of_accident ?? '' }}
-                            </td>
-                            <td>
-                                {{ $reportAccident->accident_time ?? '' }}
-                            </td>
-                            <td>
-                                {{ $reportAccident->estimate_reference ?? '' }}
-                            </td>
-                            <td>
-                                {{ $reportAccident->estimate_date ?? '' }}
-                            </td>
-                            <td>
-                                {{ $reportAccident->damage_statement_1 ?? '' }}
-                            </td>
-                            <td>
-                                {{ $reportAccident->damage_value_1 ?? '' }}
-                            </td>
-                            <td>
-                                {{ $reportAccident->notes_1 ?? '' }}
-                            </td>
-                            <td>
-                                {{ $reportAccident->damage_statement_2 ?? '' }}
-                            </td>
-                            <td>
-                                {{ $reportAccident->damage_value_2 ?? '' }}
-                            </td>
-                            <td>
-                                {{ $reportAccident->notes_2 ?? '' }}
-                            </td>
-                            <td>
-                                {{ $reportAccident->damage_statement_3 ?? '' }}
-                            </td>
-                            <td>
-                                {{ $reportAccident->damage_value_3 ?? '' }}
-                            </td>
-                            <td>
-                                {{ $reportAccident->notes_3 ?? '' }}
-                            </td>
-                            <td>
-                                {{ $reportAccident->damage_statement_4 ?? '' }}
-                            </td>
-                            <td>
-                                {{ $reportAccident->damage_value_4 ?? '' }}
-                            </td>
-                            <td>
-                                {{ $reportAccident->notes_4 ?? '' }}
-                            </td>
-                            <td>
-                                {{ $reportAccident->damage_statement_5 ?? '' }}
-                            </td>
-                            <td>
-                                {{ $reportAccident->damage_value_5 ?? '' }}
-                            </td>
-                            <td>
-                                {{ $reportAccident->notes_5 ?? '' }}
-                            </td>
-                            <td>
-                                {{ $reportAccident->damage_statement_6 ?? '' }}
-                            </td>
-                            <td>
-                                {{ $reportAccident->damage_value_6 ?? '' }}
-                            </td>
-                            <td>
-                                {{ $reportAccident->notes_6 ?? '' }}
-                            </td>
-                            <td>
-                                {{ $reportAccident->damage_statement_7 ?? '' }}
-                            </td>
-                            <td>
-                                {{ $reportAccident->damage_value_7 ?? '' }}
-                            </td>
-                            <td>
-                                {{ $reportAccident->notes_7 ?? '' }}
-                            </td>
-                            <td>
-                                {{ $reportAccident->damage_statement_8 ?? '' }}
-                            </td>
-                            <td>
-                                {{ $reportAccident->damage_value_8 ?? '' }}
-                            </td>
-                            <td>
-                                {{ $reportAccident->notes_8 ?? '' }}
-                            </td>
-                            <td>
-                                {{ $reportAccident->damage_statement_9 ?? '' }}
-                            </td>
-                            <td>
-                                {{ $reportAccident->damage_value_9 ?? '' }}
-                            </td>
-                            <td>
-                                {{ $reportAccident->notes_9 ?? '' }}
-                            </td>
-                            <td>
-                                {{ $reportAccident->damage_statement_10 ?? '' }}
-                            </td>
-                            <td>
-                                {{ $reportAccident->damage_value_10 ?? '' }}
-                            </td>
-                            <td>
-                                {{ $reportAccident->notes_10 ?? '' }}
-                            </td>
-                            <td>
-                                @foreach($reportAccident->accident_photos as $key => $media)
-                                    <a href="{{ $media->getUrl() }}" target="_blank" style="display: inline-block">
-                                        <img src="{{ $media->getUrl('thumb') }}">
-                                    </a>
-                                @endforeach
-                            </td>
-                            <td>
-                                {{ $reportAccident->name_1 ?? '' }}
-                            </td>
-                            <td>
-                                {{ $reportAccident->dep_mang_1 ?? '' }}
-                            </td>
-                            <td>
-                                {{ $reportAccident->name_2 ?? '' }}
-                            </td>
-                            <td>
-                                {{ $reportAccident->dep_mang_2 ?? '' }}
-                            </td>
-                            <td>
-                                {{ $reportAccident->name_3 ?? '' }}
-                            </td>
-                            <td>
-                                {{ $reportAccident->dep_mang_3 ?? '' }}
-                            </td>
-                            <td>
-                                {{ $reportAccident->name_4 ?? '' }}
-                            </td>
-                            <td>
-                                {{ $reportAccident->dep_mang_4 ?? '' }}
-                            </td>
-                            <td>
-                                <span style="display:none">{{ $reportAccident->confidence ?? '' }}</span>
-                                <input type="checkbox" disabled="disabled" {{ $reportAccident->confidence ? 'checked' : '' }}>
-                            </td>
-                            <td>
-                                @can('report_accident_show')
-                                    <a class="btn btn-xs btn-primary" href="{{ route('admin.report-accidents.show', $reportAccident->id) }}">
-                                        {{ trans('global.view') }}
-                                    </a>
-                                @endcan
-
-                                @can('report_accident_edit')
-                                    <a class="btn btn-xs btn-info" href="{{ route('admin.report-accidents.edit', $reportAccident->id) }}">
-                                        {{ trans('global.edit') }}
-                                    </a>
-                                @endcan
-
-                                @can('report_accident_delete')
-                                    <form action="{{ route('admin.report-accidents.destroy', $reportAccident->id) }}" method="POST" onsubmit="return confirm('{{ trans('global.areYouSure') }}');" style="display: inline-block;">
-                                        <input type="hidden" name="_method" value="DELETE">
-                                        <input type="hidden" name="_token" value="{{ csrf_token() }}">
-                                        <input type="submit" class="btn btn-xs btn-danger" value="{{ trans('global.delete') }}">
-                                    </form>
-                                @endcan
-
-                            </td>
-
-                        </tr>
-                    @endforeach
-                </tbody>
-            </table>
-        </div>
+                    </th>
+                    <th>
+                        {{ trans('cruds.reportAccident.fields.id') }}
+                    </th>
+                    <th>
+                        {{ trans('cruds.reportAccident.fields.location') }}
+                    </th>
+                    <th>
+                        {{ trans('cruds.reportAccident.fields.offender') }}
+                    </th>
+                    <th>
+                        {{ trans('cruds.reportAccident.fields.offender_id_number') }}
+                    </th>
+                    <th>
+                        {{ trans('cruds.reportAccident.fields.car_number') }}
+                    </th>
+                    <th>
+                        {{ trans('cruds.reportAccident.fields.issuer') }}
+                    </th>
+                    <th>
+                        {{ trans('cruds.reportAccident.fields.date_of_accident') }}
+                    </th>
+                    <th>
+                        {{ trans('cruds.reportAccident.fields.accident_time') }}
+                    </th>
+                    <th>
+                        {{ trans('cruds.reportAccident.fields.estimate_reference') }}
+                    </th>
+                    <th>
+                        {{ trans('cruds.reportAccident.fields.estimate_date') }}
+                    </th>
+                    <th>
+                        {{ trans('cruds.reportAccident.fields.damage_statement_1') }}
+                    </th>
+                    <th>
+                        {{ trans('cruds.reportAccident.fields.damage_value_1') }}
+                    </th>
+                    <th>
+                        {{ trans('cruds.reportAccident.fields.notes_1') }}
+                    </th>
+                    <th>
+                        {{ trans('cruds.reportAccident.fields.damage_statement_2') }}
+                    </th>
+                    <th>
+                        {{ trans('cruds.reportAccident.fields.damage_value_2') }}
+                    </th>
+                    <th>
+                        {{ trans('cruds.reportAccident.fields.notes_2') }}
+                    </th>
+                    <th>
+                        {{ trans('cruds.reportAccident.fields.damage_statement_3') }}
+                    </th>
+                    <th>
+                        {{ trans('cruds.reportAccident.fields.damage_value_3') }}
+                    </th>
+                    <th>
+                        {{ trans('cruds.reportAccident.fields.notes_3') }}
+                    </th>
+                    <th>
+                        {{ trans('cruds.reportAccident.fields.damage_statement_4') }}
+                    </th>
+                    <th>
+                        {{ trans('cruds.reportAccident.fields.damage_value_4') }}
+                    </th>
+                    <th>
+                        {{ trans('cruds.reportAccident.fields.notes_4') }}
+                    </th>
+                    <th>
+                        {{ trans('cruds.reportAccident.fields.damage_statement_5') }}
+                    </th>
+                    <th>
+                        {{ trans('cruds.reportAccident.fields.damage_value_5') }}
+                    </th>
+                    <th>
+                        {{ trans('cruds.reportAccident.fields.notes_5') }}
+                    </th>
+                    <th>
+                        {{ trans('cruds.reportAccident.fields.damage_statement_6') }}
+                    </th>
+                    <th>
+                        {{ trans('cruds.reportAccident.fields.damage_value_6') }}
+                    </th>
+                    <th>
+                        {{ trans('cruds.reportAccident.fields.notes_6') }}
+                    </th>
+                    <th>
+                        {{ trans('cruds.reportAccident.fields.damage_statement_7') }}
+                    </th>
+                    <th>
+                        {{ trans('cruds.reportAccident.fields.damage_value_7') }}
+                    </th>
+                    <th>
+                        {{ trans('cruds.reportAccident.fields.notes_7') }}
+                    </th>
+                    <th>
+                        {{ trans('cruds.reportAccident.fields.damage_statement_8') }}
+                    </th>
+                    <th>
+                        {{ trans('cruds.reportAccident.fields.damage_value_8') }}
+                    </th>
+                    <th>
+                        {{ trans('cruds.reportAccident.fields.notes_8') }}
+                    </th>
+                    <th>
+                        {{ trans('cruds.reportAccident.fields.damage_statement_9') }}
+                    </th>
+                    <th>
+                        {{ trans('cruds.reportAccident.fields.damage_value_9') }}
+                    </th>
+                    <th>
+                        {{ trans('cruds.reportAccident.fields.notes_9') }}
+                    </th>
+                    <th>
+                        {{ trans('cruds.reportAccident.fields.damage_statement_10') }}
+                    </th>
+                    <th>
+                        {{ trans('cruds.reportAccident.fields.damage_value_10') }}
+                    </th>
+                    <th>
+                        {{ trans('cruds.reportAccident.fields.notes_10') }}
+                    </th>
+                    <th>
+                        {{ trans('cruds.reportAccident.fields.accident_photos') }}
+                    </th>
+                    <th>
+                        {{ trans('cruds.reportAccident.fields.name_1') }}
+                    </th>
+                    <th>
+                        {{ trans('cruds.reportAccident.fields.dep_mang_1') }}
+                    </th>
+                    <th>
+                        {{ trans('cruds.reportAccident.fields.name_2') }}
+                    </th>
+                    <th>
+                        {{ trans('cruds.reportAccident.fields.dep_mang_2') }}
+                    </th>
+                    <th>
+                        {{ trans('cruds.reportAccident.fields.name_3') }}
+                    </th>
+                    <th>
+                        {{ trans('cruds.reportAccident.fields.dep_mang_3') }}
+                    </th>
+                    <th>
+                        {{ trans('cruds.reportAccident.fields.name_4') }}
+                    </th>
+                    <th>
+                        {{ trans('cruds.reportAccident.fields.dep_mang_4') }}
+                    </th>
+                    <th>
+                        {{ trans('cruds.reportAccident.fields.confidence') }}
+                    </th>
+                    <th>
+                        &nbsp;
+                    </th>
+                </tr>
+            </thead>
+        </table>
     </div>
 </div>
 
@@ -378,14 +189,14 @@
     $(function () {
   let dtButtons = $.extend(true, [], $.fn.dataTable.defaults.buttons)
 @can('report_accident_delete')
-  let deleteButtonTrans = '{{ trans('global.datatables.delete') }}'
+  let deleteButtonTrans = '{{ trans('global.datatables.delete') }}';
   let deleteButton = {
     text: deleteButtonTrans,
     url: "{{ route('admin.report-accidents.massDestroy') }}",
     className: 'btn-danger',
     action: function (e, dt, node, config) {
-      var ids = $.map(dt.rows({ selected: true }).nodes(), function (entry) {
-          return $(entry).data('entry-id')
+      var ids = $.map(dt.rows({ selected: true }).data(), function (entry) {
+          return entry.id
       });
 
       if (ids.length === 0) {
@@ -407,18 +218,78 @@
   dtButtons.push(deleteButton)
 @endcan
 
-  $.extend(true, $.fn.dataTable.defaults, {
+  let dtOverrideGlobals = {
+    buttons: dtButtons,
+    processing: true,
+    serverSide: true,
+    retrieve: true,
+    aaSorting: [],
+    ajax: "{{ route('admin.report-accidents.index') }}",
+    columns: [
+      { data: 'placeholder', name: 'placeholder' },
+{ data: 'id', name: 'id' },
+{ data: 'location', name: 'location' },
+{ data: 'offender', name: 'offender' },
+{ data: 'offender_id_number', name: 'offender_id_number' },
+{ data: 'car_number', name: 'car_number' },
+{ data: 'issuer', name: 'issuer' },
+{ data: 'date_of_accident', name: 'date_of_accident' },
+{ data: 'accident_time', name: 'accident_time' },
+{ data: 'estimate_reference', name: 'estimate_reference' },
+{ data: 'estimate_date', name: 'estimate_date' },
+{ data: 'damage_statement_1', name: 'damage_statement_1' },
+{ data: 'damage_value_1', name: 'damage_value_1' },
+{ data: 'notes_1', name: 'notes_1' },
+{ data: 'damage_statement_2', name: 'damage_statement_2' },
+{ data: 'damage_value_2', name: 'damage_value_2' },
+{ data: 'notes_2', name: 'notes_2' },
+{ data: 'damage_statement_3', name: 'damage_statement_3' },
+{ data: 'damage_value_3', name: 'damage_value_3' },
+{ data: 'notes_3', name: 'notes_3' },
+{ data: 'damage_statement_4', name: 'damage_statement_4' },
+{ data: 'damage_value_4', name: 'damage_value_4' },
+{ data: 'notes_4', name: 'notes_4' },
+{ data: 'damage_statement_5', name: 'damage_statement_5' },
+{ data: 'damage_value_5', name: 'damage_value_5' },
+{ data: 'notes_5', name: 'notes_5' },
+{ data: 'damage_statement_6', name: 'damage_statement_6' },
+{ data: 'damage_value_6', name: 'damage_value_6' },
+{ data: 'notes_6', name: 'notes_6' },
+{ data: 'damage_statement_7', name: 'damage_statement_7' },
+{ data: 'damage_value_7', name: 'damage_value_7' },
+{ data: 'notes_7', name: 'notes_7' },
+{ data: 'damage_statement_8', name: 'damage_statement_8' },
+{ data: 'damage_value_8', name: 'damage_value_8' },
+{ data: 'notes_8', name: 'notes_8' },
+{ data: 'damage_statement_9', name: 'damage_statement_9' },
+{ data: 'damage_value_9', name: 'damage_value_9' },
+{ data: 'notes_9', name: 'notes_9' },
+{ data: 'damage_statement_10', name: 'damage_statement_10' },
+{ data: 'damage_value_10', name: 'damage_value_10' },
+{ data: 'notes_10', name: 'notes_10' },
+{ data: 'accident_photos', name: 'accident_photos', sortable: false, searchable: false },
+{ data: 'name_1', name: 'name_1' },
+{ data: 'dep_mang_1', name: 'dep_mang_1' },
+{ data: 'name_2', name: 'name_2' },
+{ data: 'dep_mang_2', name: 'dep_mang_2' },
+{ data: 'name_3', name: 'name_3' },
+{ data: 'dep_mang_3', name: 'dep_mang_3' },
+{ data: 'name_4', name: 'name_4' },
+{ data: 'dep_mang_4', name: 'dep_mang_4' },
+{ data: 'confidence', name: 'confidence' },
+{ data: 'actions', name: '{{ trans('global.actions') }}' }
+    ],
     orderCellsTop: true,
     order: [[ 1, 'desc' ]],
     pageLength: 100,
-  });
-  let table = $('.datatable-ReportAccident:not(.ajaxTable)').DataTable({ buttons: dtButtons })
+  };
+  let table = $('.datatable-ReportAccident').DataTable(dtOverrideGlobals);
   $('a[data-toggle="tab"]').on('shown.bs.tab click', function(e){
       $($.fn.dataTable.tables(true)).DataTable()
           .columns.adjust();
   });
   
-})
+});
 
 </script>
 @endsection
